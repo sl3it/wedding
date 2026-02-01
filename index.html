@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Day | A & M</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main-bg: #f9f7f2;
+            --accent: #8e9775; /* Элегантный шалфейный */
+            --text-dark: #333;
+            --white: #ffffff;
+        }
+
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--main-bg);
+            color: var(--text-dark);
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 400; }
+
+        /* Первый экран */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+                        url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1920') center/cover no-repeat fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 { font-size: 4.5rem; margin: 10px 0; }
+        .hero p { font-size: 1.1rem; letter-spacing: 4px; text-transform: uppercase; }
+
+        /* Секция История */
+        .section { padding: 80px 20px; max-width: 900px; margin: 0 auto; text-align: center; }
+        .story-text { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.4rem; line-height: 1.8; color: var(--accent); }
+
+        /* Расписание в стиле минимализм */
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .program-item img { width: 50px; margin-bottom: 15px; opacity: 0.6; }
+        .program-item h4 { margin: 10px 0 5px; font-size: 1.2rem; }
+
+        /* Дресс-код */
+        .palette { display: flex; justify-content: center; gap: 15px; margin-top: 20px; }
+        .color-circle { width: 50px; height: 50px; border-radius: 50%; border: 2px solid white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+
+        /* Форма RSVP */
+        .rsvp-form {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            text-align: left;
+            max-width: 500px;
+            margin: 40px auto;
+        }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.9rem; }
+        input, select, textarea {
+            width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit;
+        }
+        .submit-btn {
+            width: 100%;
+            background: var(--accent);
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .submit-btn:hover { opacity: 0.9; transform: translateY(-2px); }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <p>Save the Date</p>
+        <h1>Даниил & Анастасия</h1>
+        <p>26.06.2026</p>
+    </header>
+
+    <section class="section">
+        <h2>Наша история</h2>
+        <p class="story-text">
+            «Все началось с одной случайной встречи в кофейне, а превратилось в бесконечное путешествие длиной в жизнь. Мы решили сказать друг другу "Да" и приглашаем вас стать свидетелями этого момента».
+        </p>
+    </section>
+
+    <section class="section" style="background: #fff; max-width: 100%;">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <h2>Тайминг дня</h2>
+            <div class="program-grid">
+                <div class="program-item">
+                    <h4>16:00</h4>
+                    <p>Welcome & Drinks</p>
+                </div>
+                <div class="program-item">
+                    <h4>17:00</h4>
+                    <p>Церемония</p>
+                </div>
+                <div class="program-item">
+                    <h4>18:30</h4>
+                    <p>Ужин и танцы</p>
+                </div>
+                <div class="program-item">
+                    <h4>22:00</h4>
+                    <p>Торт и финал</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Дресс-код</h2>
+        <p>Будем признательны, если вы поддержите цветовую гамму нашей свадьбы:</p>
+        <div class="palette">
+            <div class="color-circle" style="background: #8e9775;"></div>
+            <div class="color-circle" style="background: #e28e8e;"></div>
+            <div class="color-circle" style="background: #d4a373;"></div>
+            <div class="color-circle" style="background: #e9edc9;"></div>
+            <div class="color-circle" style="background: #ccd5ae;"></div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Анкета гостя</h2>
+        <div class="rsvp-form">
+            <div class="form-group">
+                <label>Ваше Имя и Фамилия</label>
+                <input type="text" placeholder="Введите ваше имя">
+            </div>
+            <div class="form-group">
+                <label>Придете ли вы?</label>
+                <select>
+                    <option>Я приду</option>
+                    <option>Приду с парой</option>
+                    <option>К сожалению, не смогу</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Предпочтения по напиткам</label>
+                <input type="text" placeholder="Вино, виски, б/а...">
+            </div>
+            <button class="submit-btn" onclick="alert('Данные отправлены! Ждем вас!')">Подтвердить участие</button>
+        </div>
+    </section>
+    <section class="section" id="faq">
+        <h2>Частые вопросы</h2>
+        <div class="faq-container">
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Нужно ли дарить цветы? <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Мы очень любим цветы, но они, к сожалению, быстро вянут. Если вы хотите сделать нам приятное, вместо букета можно подарить бутылку вашего любимого вина для нашей будущей домашней винотеки.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Будет ли организован трансфер? <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Да, для гостей будет организован комфортабельный микроавтобус от ст. м. "Центральная" в 14:20. После праздника он также отвезет всех обратно в город.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Можно ли брать с собой детей? <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Мы будем рады видеть вас всей семьей! Однако, пожалуйста, учтите, что специальной детской зоны и аниматоров на мероприятии не предусмотрено.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Когда нужно дать окончательный ответ? <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Пожалуйста, заполните анкету на этом сайте до 1 августа 2026 года, чтобы мы могли правильно рассчитать количество мест и меню.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <style>
+        /* Стили для FAQ */
+        .faq-container {
+            max-width: 700px;
+            margin: 40px auto;
+            text-align: left;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 20px 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .faq-question:hover {
+            color: var(--accent);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+            padding: 0 10px;
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px; /* Достаточно для текста */
+            padding-bottom: 20px;
+        }
+
+        .faq-item.active .faq-question span {
+            transform: rotate(45deg);
+        }
+
+        .faq-question span {
+            font-size: 1.5rem;
+            transition: 0.3s;
+        }
+    </style>
+
+    <script>
+        // Функция для раскрытия FAQ
+        function toggleFaq(button) {
+            const item = button.parentElement;
+            item.classList.toggle('active');
+        }
+    </script>
+
+    <footer style="padding: 60px; text-align: center; background: #333; color: #fff;">
+        <h2 style="color: #fff;">До встречи!</h2>
+        <p>По всем вопросам: +7 (999) 000-00-00</p>
+    </footer>
+
+</body>
+</html>
