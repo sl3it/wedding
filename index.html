@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wedding Day | Даниил & Анастасия</title>
+    <title>Свадебное приглашение к Даниила и Анастасии</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
-        /* Стили для слайдера */
 .swiper {
     width: 100%;
     padding-top: 20px;
     padding-bottom: 50px;
+}
+.timeline-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    cursor: pointer;
 }
 
 .swiper-slide {
@@ -191,7 +196,6 @@ body {
     <section class="card-section header-card" data-aos="fade-down" data-aos-duration="1500">
         <div class="corner-decor top-left"></div><div class="corner-decor top-right"></div>
         <div class="corner-decor bottom-left"></div><div class="corner-decor bottom-right"></div>
-
         <div class="header-subtitle">SAVE THE DATE</div>
         <h1 class="header-names">Даниил & Анастасия</h1>
         <div style="font-size: 1.5rem; font-family: 'Playfair Display'; color: #555;">26.06.2026</div>
@@ -206,9 +210,19 @@ body {
         <div class="half-card" data-aos="fade-left">
             <h2>Программа</h2>
             <div class="timeline-grid">
-                <div class="timeline-item"><div class="time">13:00</div><div>Регистрация</div></div>
+                <a href="registration.html" class="timeline-link">
+        <div class="timeline-item">
+            <div class="time">13:00</div>
+            <div>Регистрация</div>
+    </div>
+</a>
                 <div class="timeline-item"><div class="time">13:30</div><div>Фотосессия</div></div>
-                <div class="timeline-item"><div class="time">16:00</div><div>Банкет</div></div>
+                <a href="banket.html" class="timeline-link">
+        <div class="timeline-item">
+            <div class="time">16:00</div>
+            <div>Банкет</div>
+    </div>
+</a>
                 <div class="timeline-item"><div class="time">22:00</div><div>Торт</div></div>
             </div>
         </div>
@@ -290,7 +304,6 @@ body {
             <h3>Спасибо, ваш ответ принят!</h3>
         </div>
     </section>
-    </footer>
     <section class="card-section" data-aos="fade-up">
         <div class="corner-decor top-left"></div><div class="corner-decor top-right"></div>
         <div class="corner-decor bottom-left"></div><div class="corner-decor bottom-right"></div>
@@ -362,4 +375,3 @@ body {
     });
 </script>
 </body>
-</html>
