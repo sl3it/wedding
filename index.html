@@ -8,6 +8,39 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
+        /* Стили для слайдера */
+.swiper {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 400px;
+    border: 10px solid #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Золотые стрелки и точки */
+.swiper-button-next, .swiper-button-prev {
+    color: var(--gold-primary) !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--gold-primary) !important;
+}
         :root {
             --gold-primary: #c5a059;
             --gold-light: #e6c88b;
@@ -23,7 +56,7 @@
             color: var(--text-color);
             background-color: #fcfcfc;
             /* Новый красивый фон: нежные цветы в светлых тонах */
-            background-image: url('https://www.google.com/url?sa=t&source=web&rct=j&url=https%3A%2F%2Fru.freepik.com%2Ffree-photos-vectors%2F%25D0%25B1%25D0%25B5%25D0%25BB%25D1%258B%25D0%25B9-%25D0%25BC%25D1%2580%25D0%25B0%25D0%25BC%25D0%25BE%25D1%2580-%25D0%25B7%25D0%25BE%25D0%25BB%25D0%25BE%25D1%2582%25D0%25BE%25D0%25BC&ved=0CBYQjRxqFwoTCLC06PXxt5IDFQAAAAAdAAAAABAj&opi=89978449');
+            background-image: url('https://png.pngtree.com/background/20211215/original/pngtree-white-gold-rim-marble-background-picture-image_1461726.jpg');
             /* Альтернатива: url('https://img.freepik.com/free-photo/top-view-wedding-invitation-mock-up-with-roses_23-2148563583.jpg'); */
             background-size: cover;
             background-attachment: fixed;
@@ -225,6 +258,48 @@
         <div class="corner-decor top-left"></div><div class="corner-decor top-right"></div>
         <div class="corner-decor bottom-left"></div><div class="corner-decor bottom-right"></div>
 
+<section class="card-section" data-aos="fade-up">
+        <div class="corner-decor top-left"></div><div class="corner-decor top-right"></div>
+        <div class="corner-decor bottom-left"></div><div class="corner-decor bottom-right"></div>
+
+        <h2>Наши моменты</h2>
+        <p style="font-style: italic; color: #888; margin-bottom: 20px;">Листайте нашу историю</p>
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/first.jpg"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/two.jpg"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/thert.jpg"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/four.jpg"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/five.jpg"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/six.jpg"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/seven.jpg"/>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <section class="card-section" data-aos="fade-up">
+        <div class="corner-decor top-left"></div><div class="corner-decor top-right"></div>
+        <div class="corner-decor bottom-left"></div><div class="corner-decor bottom-right"></div>
+
         <h2>Вопросы и ответы</h2>
 
         <div style="text-align: left; max-width: 700px; margin: 0 auto; line-height: 1.6;">
@@ -245,12 +320,12 @@
 
             <div style="margin-bottom: 10px;">
                 <h3 style="text-align: left; font-size: 1.2rem; margin-bottom: 10px;">До какого числа нужно дать ответ?</h3>
-                <p>Пожалуйста, заполните анкету гостя до 1 июня 2026 года, чтобы мы могли учесть все нюансы при подготовке.</p>
+                <p>Пожалуйста, заполните анкету гостя до 1 мая 2026 года, чтобы мы могли учесть все нюансы при подготовке.</p>
             </div>
         </div>
     </section>
         <footer data-aos="fade-in">
-        <div style="font-size: 2.5rem; margin-bottom: 10px;">Анастасия & Даниил</div>
+        <div style="font-size: 2.5rem; margin-bottom: 10px;">Даниил & Анастасия</div>
         <p>До встречи на празднике!</p>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -275,5 +350,21 @@
             }
         });
     </script>
+     <script>
+    var swiper = new Swiper(".mySwiper", {
+        effect: "cards", // Красивый эффект стопки карт
+        grabCursor: true,
+        centeredSlides: true,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
 </body>
 </html>
