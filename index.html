@@ -5,180 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Свадебное приглашение | Даниил & Анастасия</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <style>
-.swiper {
-    width: 100%;
-    padding-top: 20px;
-    padding-bottom: 50px;
-}
-.timeline-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    cursor: pointer;
-}
-
-.swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 300px;
-    height: 400px;
-    border: 10px solid #fff;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.swiper-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.swiper-button-next, .swiper-button-prev {
-    color: var(--gold-primary) !important;
-}
-
-.swiper-pagination-bullet-active {
-    background: var(--gold-primary) !important;
-}
-        :root {
-            --gold-primary: #c5a059;
-            --gold-light: #e6c88b;
-            --gold-gradient: linear-gradient(135deg, #c5a059 0%, #e6c88b 50%, #c5a059 100%);
-            --text-color: #4a4a4a;
-        }
-
-        * { box-sizing: border-box; }
-
-body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    color: var(--text-color);
-    background-color: #fcfcfc;
-    background-image: url('images/convas.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    image-rendering: -webkit-optimize-contrast;
-}
-        }
-
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-            color: var(--gold-primary);
-            text-align: center;
-            font-weight: 400;
-        }
-
-        .card-section {
-            background: rgba(255, 255, 255, 0.96);
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 60px 40px;
-            position: relative;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-            text-align: center;
-        }
-
-        .card-section::before {
-            content: "";
-            position: absolute;
-            top: 12px; left: 12px; right: 12px; bottom: 12px;
-            border: 1px solid var(--gold-primary);
-            pointer-events: none;
-        }
-        .card-section::after {
-            content: "";
-            position: absolute;
-            top: 6px; left: 6px; right: 6px; bottom: 6px;
-            border: 1px solid rgba(197, 160, 89, 0.3);
-            pointer-events: none;
-        }
-
-        .header-card { margin-top: 80px; }
-        .header-subtitle { font-size: 1rem; letter-spacing: 4px; text-transform: uppercase; color: #888; margin-bottom: 10px; }
-        .header-names {
-            font-size: clamp(2.5rem, 6vw, 5rem);
-            margin: 15px 0;
-            background: var(--gold-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-style: italic;
-        }
-
-        .grid-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            max-width: 900px;
-            margin: 0 auto;
-            justify-content: center;
-        }
-        .half-card {
-            flex: 1 1 400px;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 50px 30px;
-            position: relative;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            border: 1px solid rgba(197, 160, 89, 0.2);
-        }
-        .half-card::before {
-            content: "";
-            position: absolute;
-            top: 8px; left: 8px; right: 8px; bottom: 8px;
-            border: 1px solid var(--gold-primary);
-            opacity: 0.5;
-            pointer-events: none;
-        }
-
-        .story-text { font-size: 1.15rem; line-height: 1.8; font-style: italic; color: #555; }
-
-        .timeline-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px; }
-        .timeline-item { background: #fff; border: 1px solid #f0e6d2; padding: 20px; transition: 0.3s; }
-        .timeline-item:hover { border-color: var(--gold-primary); transform: translateY(-3px); box-shadow: 0 5px 15px rgba(197,160,89,0.15); }
-        .time { font-family: 'Playfair Display'; font-size: 1.3rem; color: var(--gold-primary); font-weight: bold; }
-
-        .map-container {
-            margin-top: 30px;
-            border: 1px solid #e0e0e0;
-            position: relative;
-            z-index: 1;
-        }
-
-        .rsvp-form { max-width: 600px; margin: 0 auto; text-align: left; }
-        .form-row { margin-bottom: 30px; border-bottom: 1px solid #d4c4a8; padding-bottom: 5px; }
-        .form-label { display: block; font-family: 'Playfair Display'; font-size: 1.1rem; color: #444; margin-bottom: 10px; }
-        .form-input, .form-select { width: 100%; border: none; background: transparent; padding: 10px 0; font-family: 'Montserrat'; font-size: 1rem; outline: none; }
-
-        .submit-btn {
-            width: 100%; margin-top: 40px; background: var(--gold-gradient); color: white; border: none;
-            padding: 18px; font-size: 1.1rem; font-family: 'Playfair Display'; cursor: pointer;
-            transition: 0.3s; text-transform: uppercase; letter-spacing: 2px;
-        }
-        .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(197, 160, 89, 0.4); }
-
-        .corner-decor {
-            position: absolute;
-            width: 60px; height: 60px;
-            opacity: 0.8;
-            border-style: double; border-color: var(--gold-primary); border-width: 4px;
-        }
-        .top-left { top: 18px; left: 18px; border-right: none; border-bottom: none; }
-        .top-right { top: 18px; right: 18px; border-left: none; border-bottom: none; }
-        .bottom-left { bottom: 18px; left: 18px; border-right: none; border-top: none; }
-        .bottom-right { bottom: 18px; right: 18px; border-left: none; border-top: none; }
-
-        footer { text-align: center; padding: 60px; color: var(--gold-primary); font-family: 'Playfair Display'; }
-
-        @media (max-width: 768px) {
-            .grid-container { flex-direction: column; }
-            .timeline-grid { grid-template-columns: 1fr; }
-        }
-    </style>
+        <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -187,7 +14,7 @@ body {
         <div class="corner-decor bottom-left"></div><div class="corner-decor bottom-right"></div>
         <div class="header-subtitle">SAVE THE DATE</div>
         <h1 class="header-names">Даниил & Анастасия</h1>
-        <div style="font-size: 1.5rem; font-family: 'Playfair Display'; color: #555;">26.06.2026</div>
+        <div class="event-date">26.06.2026</div>
     </section>
 
     <div class="grid-container">
@@ -295,10 +122,6 @@ body {
             <h3>Спасибо, ваш ответ принят!</h3>
         </div>
     </section>
-    <section class="card-section" data-aos="fade-up">
-        <div class="corner-decor top-left"></div><div class="corner-decor top-right"></div>
-        <div class="corner-decor bottom-left"></div><div class="corner-decor bottom-right"></div>
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <section class="card-section" data-aos="fade-up">
@@ -307,18 +130,18 @@ body {
 
         <h2>Вопросы и ответы</h2>
 
-        <div style="text-align: left; max-width: 700px; margin: 0 auto; line-height: 1.6;">
+        <div class="faq-container">
             <div style="margin-bottom: 25px;">
-                <h3 style="text-align: left; font-size: 1.2rem; margin-bottom: 10px;">Будет ли дресс-код?</h3>
+                <h3 class="faq-question">Будет ли дресс-код?</h3>
                 <p>Мы хотим, чтобы наш праздник был наполнен легкостью, поэтому не устанавливаем строгих правил в одежде. Будем рады видеть вас в любых образах, которые подчеркнут вашу индивидуальность и праздничное настроение.</p>
             </div>
             <div style="margin-bottom: 25px;">
-                <h3 style="text-align: left; font-size: 1.2rem; margin-bottom: 10px;">Как добраться?</h3>
+                <h3 class="faq-question">Как добраться?</h3>
                 <p>Мы позаботились о том, чтобы ваш путь был максимально удобным. Вы можете приехать на личном автомобиле — на территории площадки предусмотрена парковка. Также для вашего комфорта будет организован наш праздничный автобус, который доставит вас прямо к месту торжества. Точное местоположение и карта указаны выше..</p>
             </div>
 
             <div style="margin-bottom: 10px;">
-                <h3 style="text-align: left; font-size: 1.2rem; margin-bottom: 10px;">До какого числа нужно дать ответ?</h3>
+                <h3 class="faq-question">До какого числа нужно дать ответ?</h3>
                 <p>Чтобы мы успели продумать каждую деталь и сделать праздник идеальным для каждого из вас, пожалуйста, подтвердите своё присутствие в анкете до 1 мая 2026 года. Нам очень важно ваше участие!</p>
             </div>
         </div>
@@ -328,41 +151,6 @@ body {
         <p>До встречи на празднике!</p>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 1000, once: true });
-
-        const form = document.getElementById('tg-form');
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const btn = document.getElementById('btn-text');
-            btn.innerText = "Отправка...";
-
-            const response = await fetch(form.action, {
-                method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' }
-            });
-
-            if (response.ok) {
-                form.style.display = 'none';
-                document.getElementById('success-msg').style.display = 'block';
-            } else {
-                btn.innerText = "Ошибка, попробуйте еще раз";
-            }
-        });
-    </script>
-     <script>
-    var swiper = new Swiper(".mySwiper", {
-        effect: "cards",
-        grabCursor: true,
-        centeredSlides: true,
-        loop: true,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-    });
-</script>
+    <script src="js/scripts.js"></script>
 </body>
+</html>
